@@ -18,14 +18,12 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - make
     - pkg-config
   host:
-    - libxcb >=1.13
+    - libxcb
     - xorg-xproto
-  run:
-    - libxcb >=1.13
 
 test:
   commands:
@@ -41,3 +39,4 @@ about:
 extra:
   recipe-maintainers:
     - scopatz
+    - hmaarrfk
